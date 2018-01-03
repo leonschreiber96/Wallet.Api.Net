@@ -16,4 +16,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Wallet.Api.Account\Wallet.Api.Account.csproj" />
+    <ProjectReference Include="..\Wallet.Api.User\Wallet.Api.User.csproj" />
+  </ItemGroup>
+
 </Project>
