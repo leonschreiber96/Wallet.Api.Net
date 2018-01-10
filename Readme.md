@@ -1,87 +1,26 @@
-# Project Title
+# Wallet.Api.Net
 
-One Paragraph of project description goes here
+C# Wrapper for the [BudgetBakers Wallet API](https://budgetbakersv30apiv1.docs.apiary.io/#).
+
+#### From Google Play
+
+Wallet is your finance planner that helps you flexibly plan your budget and track spending, so you stay in control and achieve your goals. Actively plan, manage and get a report concerning your finances, together with the people you trust, across multiple currencies, banks and financial institutions. Upload your Loyalty or Reward cards too. Get and keep full control of your finances. Tracking your money just got easier. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+At the moment there is no NuGet package available for the API, so you have to download the source code and use this for your project.
 
-### Prerequisites
+I have plans to implement a NuGet package, but don't know when that will be possible.
 
-What things you need to install the software and how to install them
-
+To use the API, you need an account in the [BudgetBakers Wallet App](https://play.google.com/store/apps/details?id=com.droid4you.application.wallet). There you can access your personal API token under 
 ```
-Give examples
-```
+Settings -> Advanced Settings -> REST API
+```.
 
-### Installing
+With your E-Mail address and API token as authentication, you can access all functions of the API and manage your account via REST.
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* [Json.NET](https://www.newtonsoft.com/json) - Popular library for Json Serialization in .Net
+* [.NET Core](https://dotnet.github.io/) - Platform independent .Net Framework by Microsoft
