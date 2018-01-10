@@ -8,6 +8,9 @@ using Wallet.Api.Net.Model;
 
 namespace Wallet.Api.Net.Account
 {
+    /// <summary>
+    /// Functions for creating bank accounts on the server
+    /// </summary>
     public static class AccountCreation
     {
         /// <summary>
@@ -31,6 +34,7 @@ namespace Wallet.Api.Net.Account
 
             var postConformObject = new
             {
+                id = accountToCreate.Id,
                 name = accountToCreate.Name,
                 color = accountToCreate.Color,
                 excludeFromStats = accountToCreate.ExcludeFromStats,

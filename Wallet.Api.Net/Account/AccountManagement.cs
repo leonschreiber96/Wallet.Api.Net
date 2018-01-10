@@ -8,6 +8,9 @@ using Wallet.Api.Net.Model;
 
 namespace Wallet.Api.Net.Account
 {
+    /// <summary>
+    /// Functions for retrieving, updating and deleting of bank accounts
+    /// </summary>
     public static class AccountManagement
     {
         /// <summary>
@@ -39,7 +42,7 @@ namespace Wallet.Api.Net.Account
         /// Updates the specified account. Properties that are null won't be changed.
         /// </summary>
         /// <param name="authUser">The e-mail address of the user to whom the account should be added</param>
-        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user</param>
+        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="accountToUpdate">Account object that specifie the properties of the account to be updated</param>
         /// <returns>Returns the unique Id of the newly created account</returns>
         public static async Task<string> Update(string authUser, string authToken, WalletAccount accountToUpdate)
@@ -79,12 +82,12 @@ namespace Wallet.Api.Net.Account
         /// Permanently deletes a user's account with the specified id
         /// </summary>
         /// <param name="authUser">The e-mail address of the user to whom the account should be added</param>
-        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user</param>
+        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="accountId">The id of the account to be deleted</param>
         public static async void Delete(string authUser, string authToken, string accountId)
         {
             if (accountId == null)
-                throw new ArgumentException("Id can't be null");
+                throw new ArgumentException("Id of deleted account can't be null");
 
             var urlSpecifier = $"account/{accountId}";
 
@@ -94,7 +97,7 @@ namespace Wallet.Api.Net.Account
                 client.DefaultRequestHeaders.Add(Constants.TokenHeaderKey, authToken);
                 client.DefaultRequestHeaders.Add(Constants.UserHeaderKey, authUser);
 
-                var response = await client.DeleteAsync(urlSpecifier);
+                await client.DeleteAsync(urlSpecifier);
             }
         }
     }

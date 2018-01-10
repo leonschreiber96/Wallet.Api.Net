@@ -8,6 +8,9 @@ using Wallet.Api.Net.Model;
 
 namespace Wallet.Api.Net.Account
 {
+    /// <summary>
+    /// Functions for retrieving bank accounts from the Server
+    /// </summary>
     public static class AccountCollection
     {
         /// <summary>
