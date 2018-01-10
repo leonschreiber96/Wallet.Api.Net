@@ -8,35 +8,36 @@ using Wallet.Api.Net.Model;
 
 namespace Wallet.Api.Net.Category
 {
+    /// <summary>
+    /// Functions for creating <see cref="WalletCategory"/>s on the server
+    /// </summary>
     public static class CategoryCreation
     {
         /// <summary>
-        /// Creates a new account for the specified user, given a valid API token
-        /// <para/>Only the name of the new account is a required property.
+        /// Creates a new Category for the specified user, given a valid API token
+        /// <para/>Only the name of the new category is a required property.
         /// <para/>Default values for other properties:<para/>
         ///     color:              #13BA78,
-        ///     excludeFromStats:   false,
-        ///     gps:                true,
-        ///     initAmount:         0,
+        ///     icon:               0,
+        ///     defaultType:        <see cref="WalletCategoryType"/>.Expense,
         ///     position:           last + 1000,
         /// </summary>
-        /// <param name="authUser">The e-mail address of the user to whom the account should be added</param>
+        /// <param name="authUser">The e-mail address of the user to whom the category should be added</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user</param>
-        /// <param name="accountToCreate">Account object that specifies the properties of the account to be created</param>
-        /// <returns>Returns the unique Id of the newly created account</returns>
-        public static async Task<string> CreateNew(string authUser, string authToken, WalletAccount accountToCreate)
+        /// <param name="categoryToCreate">Account object that specifies the properties of the category to be created</param>
+        /// <returns>Returns the unique Id of the newly created category</returns>
+        public static async Task<string> CreateNew(string authUser, string authToken, WalletCategory categoryToCreate)
         {
             var postConformObject = new
             {
-                name = accountToCreate.Name,
-                color = accountToCreate.Color,
-                excludeFromStats = accountToCreate.ExcludeFromStats,
-                gps = accountToCreate.Gps,
-                initAmount = accountToCreate.InitAmount,
-                position = accountToCreate.Position
+                name = categoryToCreate.Name,
+                color = categoryToCreate.Color,
+                icon = categoryToCreate.Icon,
+                defaultType = categoryToCreate.DefaultType,
+                position = categoryToCreate.Position,
             };
 
-            var urlSpecifier = "account";
+            var urlSpecifier = "category";
             var contentType = "application/json";
             var contentJson = JsonConvert.SerializeObject(postConformObject);
             var content = new StringContent(contentJson, Encoding.Default, contentType);

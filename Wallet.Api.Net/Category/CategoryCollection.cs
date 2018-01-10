@@ -8,12 +8,15 @@ using Wallet.Api.Net.Model;
 
 namespace Wallet.Api.Net.Category
 {
+    /// <summary>
+    /// Functions for retrieving <see cref="WalletCategory"/>s from the servers
+    /// </summary>
     public static class CategoryCollection
     {
         /// <summary>
-        /// Returns all Accounts for a specified user, given a valid API token 
+        /// Returns all Categories for a specified user, given a valid API token 
         /// </summary>
-        /// <param name="authUser">The e-mail address of the user whose accounts should be retrieved</param>
+        /// <param name="authUser">The e-mail address of the user whose categories should be retrieved</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user</param>
         public static async Task<IEnumerable<WalletCategory>> GetAll(string authUser, string authToken)
         {
