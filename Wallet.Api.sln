@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{761046F6-AA23-45A8-99D1-9D32E1FDB95D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallet.Api.Net", "Wallet.Api.Net\Wallet.Api.Net.csproj", "{C9FDF17D-B929-4C4B-9F69-C86AB4F022C4}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{761046F6-AA23-45A8-99D1-9D32E1FDB95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{761046F6-AA23-45A8-99D1-9D32E1FDB95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{761046F6-AA23-45A8-99D1-9D32E1FDB95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{761046F6-AA23-45A8-99D1-9D32E1FDB95D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C9FDF17D-B929-4C4B-9F69-C86AB4F022C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C9FDF17D-B929-4C4B-9F69-C86AB4F022C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9FDF17D-B929-4C4B-9F69-C86AB4F022C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
