@@ -17,7 +17,7 @@ namespace Wallet.Api.Net.Record
         /// Returns all Records for a specified user, given a valid API token 
         /// </summary>
         /// <param name="authUser">The e-mail address of the user whose records should be retrieved</param>
-        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user</param>
+        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         public static async Task<IEnumerable<WalletRecord>> GetAll(string authUser, string authToken)
         {
             var urlSpecifier = "records";

@@ -17,7 +17,7 @@ namespace Wallet.Api.Net.Record
         /// Returns the record with the specified id if it belongs to the specified user
         /// </summary>
         /// <param name="authUser">The e-mail address of the user whose record should be retrieved</param>
-        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user</param>
+        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="recordId">The unique id of the record that should be retrieved</param>
         public static async Task<WalletRecord> GetById(string authUser, string authToken, string recordId)
         {
@@ -76,7 +76,7 @@ namespace Wallet.Api.Net.Record
                 var response = await client.PutAsync(urlSpecifier, content);
                 var responseJson = await response.Content.ReadAsStringAsync();
 
-                return JsonConvert.DeserializeObject<dynamic>(responseJson).id;
+                return JsonConvert.DeserializeObject<dynamic>(responseJson).id.ToString();
             }
         }
 

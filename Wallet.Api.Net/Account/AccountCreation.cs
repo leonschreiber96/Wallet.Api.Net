@@ -24,7 +24,7 @@ namespace Wallet.Api.Net.Account
         ///     position:           last + 1000,
         /// </summary>
         /// <param name="authUser">The e-mail address of the user to whom the account should be added</param>
-        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user</param>
+        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="accountToCreate">Account object that specifies the properties of the account to be created</param>
         /// <returns>Returns the unique Id of the newly created account</returns>
         public static async Task<string> CreateNew(string authUser, string authToken, WalletAccount accountToCreate)
@@ -57,7 +57,7 @@ namespace Wallet.Api.Net.Account
                 var response = await client.PostAsync(urlSpecifier, content);
                 var responseJson = await response.Content.ReadAsStringAsync();
 
-                return JsonConvert.DeserializeObject<dynamic>(responseJson).id;
+                return JsonConvert.DeserializeObject<dynamic>(responseJson).id.ToString().ToString();
             }
         }
     }

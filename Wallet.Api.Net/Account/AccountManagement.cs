@@ -17,7 +17,7 @@ namespace Wallet.Api.Net.Account
         /// Returns the account with the specified id if it belongs to the specified user
         /// </summary>
         /// <param name="authUser">The e-mail address of the user whose account should be retrieved</param>
-        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user</param>
+        /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="accountId">The unique id of the account that should be retrieved</param>
         public static async Task<WalletAccount> GetById(string authUser, string authToken, string accountId)
         {
@@ -74,7 +74,7 @@ namespace Wallet.Api.Net.Account
                 var response = await client.PutAsync(urlSpecifier, content);
                 var responseJson = await response.Content.ReadAsStringAsync();
 
-                return JsonConvert.DeserializeObject<dynamic>(responseJson).id;
+                return JsonConvert.DeserializeObject<dynamic>(responseJson).id.ToString().ToString();
             }
         }
 
