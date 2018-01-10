@@ -55,7 +55,7 @@ namespace Wallet.Api.Net.Category
                 name = categoryToUpdate.Name,
                 color = categoryToUpdate.Color,
                 icon = categoryToUpdate.Icon,
-                defaultType = categoryToUpdate.DefaultType,
+                defaultType = categoryToUpdate.DefaultType.ToValidApiString(),
                 position = categoryToUpdate.Position
             };
 

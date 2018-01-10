@@ -33,7 +33,7 @@ namespace Wallet.Api.Net.Category
                 name = categoryToCreate.Name,
                 color = categoryToCreate.Color,
                 icon = categoryToCreate.Icon,
-                defaultType = categoryToCreate.DefaultType,
+                defaultType = categoryToCreate.DefaultType.ToValidApiString(),
                 position = categoryToCreate.Position,
             };
 

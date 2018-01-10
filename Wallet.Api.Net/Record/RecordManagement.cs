@@ -56,10 +56,10 @@ namespace Wallet.Api.Net.Record
                 accountId = recordToUpdate.AccountId,
                 categoryId = recordToUpdate.CategoryId,
                 amount = recordToUpdate.Amount,
-                paymentType = recordToUpdate.PaymentType,
+                paymentType = recordToUpdate.PaymentType.ToValidApiString(),
                 note = recordToUpdate.Note,
                 date = recordToUpdate.Date.ToString(),
-                recordState = recordToUpdate.RecordState
+                recordState = recordToUpdate.RecordState.ToValidApiString()
             };
 
             var urlSpecifier = $"record/{recordToUpdate.Id}";

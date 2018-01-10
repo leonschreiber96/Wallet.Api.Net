@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Wallet.Api.Net.Model;
+using Wallet.Api.Net;
 
 namespace Wallet.Api.Net.Record
 {
@@ -38,10 +39,10 @@ namespace Wallet.Api.Net.Record
                 accountId = recordToCreate.AccountId,
                 categoryId = recordToCreate.CategoryId,
                 amount = recordToCreate.Amount,
-                paymentType = recordToCreate.PaymentType,
+                paymentType = recordToCreate.PaymentType.ToValidApiString(),
                 note = recordToCreate.Note,
                 date = recordToCreate.Date.ToString(),
-                recordState = recordToCreate.RecordState
+                recordState = recordToCreate.RecordState.ToValidApiString()
             };
 
             var urlSpecifier = "record";
