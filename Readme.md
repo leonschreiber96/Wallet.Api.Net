@@ -15,7 +15,7 @@ I have plans to implement a NuGet package, but don't know when that will be poss
 To use the API, you need an account in the [BudgetBakers Wallet App](https://play.google.com/store/apps/details?id=com.droid4you.application.wallet). There you can access your personal API token under 
 ```
 Settings -> Advanced Settings -> REST API
-```.
+```
 
 With your E-Mail address and API token as authentication, you can access all functions of the API and manage your account via REST.
 
