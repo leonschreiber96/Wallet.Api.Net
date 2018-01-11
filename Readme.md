@@ -24,5 +24,3 @@ With your E-Mail address and API token as authentication, you can access all fun
 
 * [Json.NET](https://www.newtonsoft.com/json) - Popular library for Json Serialization in .Net
 * [.NET Core](https://dotnet.github.io/) - Platform independent .Net Framework by Microsoft
-
-Test
