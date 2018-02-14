@@ -9,7 +9,7 @@ namespace Wallet.Api.Net.User
 {
     public static class UserManagement
     {
-        public static async Task<bool> CheckIfUserExists(string user, string authToken)
+        public static async Task<bool> CheckIfUserExistsAsync(string user, string authToken)
         {
             using (var client = new HttpClient { BaseAddress = new Uri("https://api.budgetbakers.com/api/v1/") })
             {

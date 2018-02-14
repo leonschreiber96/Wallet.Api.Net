@@ -19,7 +19,7 @@ namespace Wallet.Api.Net.Currency
         /// <param name="authUser">The e-mail address of the user whose currency should be retrieved</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="currencyId">The unique id of the currency that should be retrieved</param>
-        public static async Task<WalletCurrency> GetById(string authUser, string authToken, string currencyId)
+        public static async Task<WalletCurrency> GetByIdAsync(string authUser, string authToken, string currencyId)
         {
             var urlSpecifier = $"currency/{currencyId}";
 
@@ -45,7 +45,7 @@ namespace Wallet.Api.Net.Currency
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="currencyToUpdate">Currency object that specifie the properties of the currency to be updated</param>
         /// <returns>Returns the unique Id of the newly created currency</returns>
-        public static async Task<string> Update(string authUser, string authToken, WalletCurrency currencyToUpdate)
+        public static async Task<string> UpdateAsync(string authUser, string authToken, WalletCurrency currencyToUpdate)
         {
             if (currencyToUpdate.Code == null)
                 throw new ArgumentException("Code of updated currency object can't be null");
@@ -85,7 +85,7 @@ namespace Wallet.Api.Net.Currency
         /// <param name="authUser">The e-mail address of the user to whom the currency should be added</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="currencyId">The id of the currency to be deleted</param>
-        public static async void Delete(string authUser, string authToken, string currencyId)
+        public static async void DeleteAsync(string authUser, string authToken, string currencyId)
         {
             if (currencyId == null)
                 throw new ArgumentException("Id of deleted currency can't be null");

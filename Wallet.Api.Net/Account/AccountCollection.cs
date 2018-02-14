@@ -18,7 +18,7 @@ namespace Wallet.Api.Net.Account
         /// </summary>
         /// <param name="authUser">The e-mail address of the user whose accounts should be retrieved</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
-        public static async Task<IEnumerable<WalletAccount>> GetAll(string authUser, string authToken)
+        public static async Task<IEnumerable<WalletAccount>> GetAllAsync(string authUser, string authToken)
         {
             var urlSpecifier = "accounts";
 

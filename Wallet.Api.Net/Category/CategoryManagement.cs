@@ -19,7 +19,7 @@ namespace Wallet.Api.Net.Category
         /// <param name="authUser">The e-mail address of the user whose category should be retrieved</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="categoryId">The unique id of the category that should be retrieved</param>
-        public static async Task<WalletCategory> GetById(string authUser, string authToken, string categoryId)
+        public static async Task<WalletCategory> GetByIdAsync(string authUser, string authToken, string categoryId)
         {
             var urlSpecifier = $"category/{categoryId}";
 
@@ -45,7 +45,7 @@ namespace Wallet.Api.Net.Category
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="categoryToUpdate">Category object that specifie the properties of the category to be updated</param>
         /// <returns>Returns the unique Id of the newly created category</returns>
-        public static async Task<string> Update(string authUser, string authToken, WalletCategory categoryToUpdate)
+        public static async Task<string> UpdateAsync(string authUser, string authToken, WalletCategory categoryToUpdate)
         {
             if (categoryToUpdate.Id == null)
                 throw new ArgumentException("Id of updated category object can't be null");
@@ -83,7 +83,7 @@ namespace Wallet.Api.Net.Category
         /// <param name="authUser">The e-mail address of the user to whom the category should be added</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="categoryId">The id of the category to be deleted</param>
-        public static async void Delete(string authUser, string authToken, string categoryId)
+        public static async void DeleteAsync(string authUser, string authToken, string categoryId)
         {
             if (categoryId == null)
                 throw new ArgumentException("Id of deleted category object can't be null");

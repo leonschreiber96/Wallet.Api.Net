@@ -19,7 +19,7 @@ namespace Wallet.Api.Net.Record
         /// <param name="authUser">The e-mail address of the user whose record should be retrieved</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="recordId">The unique id of the record that should be retrieved</param>
-        public static async Task<WalletRecord> GetById(string authUser, string authToken, string recordId)
+        public static async Task<WalletRecord> GetByIdAsync(string authUser, string authToken, string recordId)
         {
             var urlSpecifier = $"record/{recordId}";
 
@@ -45,7 +45,7 @@ namespace Wallet.Api.Net.Record
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="recordToUpdate">Record object that specifie the properties of the record to be updated</param>
         /// <returns>Returns the unique Id of the newly created record</returns>
-        public static async Task<string> Update(string authUser, string authToken, WalletRecord recordToUpdate)
+        public static async Task<string> UpdateAsync(string authUser, string authToken, WalletRecord recordToUpdate)
         {
             if (recordToUpdate.Id == null)
                 throw new ArgumentException("Id of updated record object can't be null");
@@ -86,7 +86,7 @@ namespace Wallet.Api.Net.Record
         /// <param name="authUser">The e-mail address of the user to whom the record should be added</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="recordId">The id of the record to be deleted</param>
-        public static async void Delete(string authUser, string authToken, string recordId)
+        public static async void DeleteAsync(string authUser, string authToken, string recordId)
         {
             if (recordId == null)
                 throw new ArgumentException("Id of deleted record object can't be null");

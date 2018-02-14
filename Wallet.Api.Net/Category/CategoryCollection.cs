@@ -18,7 +18,7 @@ namespace Wallet.Api.Net.Category
         /// </summary>
         /// <param name="authUser">The e-mail address of the user whose categories should be retrieved</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
-        public static async Task<IEnumerable<WalletCategory>> GetAll(string authUser, string authToken)
+        public static async Task<IEnumerable<WalletCategory>> GetAllAsync(string authUser, string authToken)
         {
             var urlSpecifier = "categories";
 

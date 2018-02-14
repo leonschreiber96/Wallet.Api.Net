@@ -18,7 +18,7 @@ namespace Wallet.Api.Net.Balance
         /// <param name="authUser">The e-mail address of the user whose balance should be retrieved</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="accountId">The unique Id of the account whose balance should be retrieved</param>
-        public static async Task<double> Get(string authUser, string authToken, string accountId)
+        public static async Task<double> GetAsync(string authUser, string authToken, string accountId)
         {
             var urlSpecifier = $"balance/{accountId}";
 

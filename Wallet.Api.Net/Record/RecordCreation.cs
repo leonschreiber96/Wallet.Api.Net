@@ -31,7 +31,7 @@ namespace Wallet.Api.Net.Record
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="recordToCreate">Account object that specifies the properties of the record to be created</param>
         /// <returns>Returns the unique Id of the newly created record</returns>
-        public static async Task<string> CreateNew(string authUser, string authToken, WalletRecord recordToCreate)
+        public static async Task<string> CreateNewAsync(string authUser, string authToken, WalletRecord recordToCreate)
         {
             var postConformObject = new
             {

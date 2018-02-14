@@ -19,7 +19,7 @@ namespace Wallet.Api.Net.Account
         /// <param name="authUser">The e-mail address of the user whose account should be retrieved</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="accountId">The unique id of the account that should be retrieved</param>
-        public static async Task<WalletAccount> GetById(string authUser, string authToken, string accountId)
+        public static async Task<WalletAccount> GetByIdAsync(string authUser, string authToken, string accountId)
         {
             var urlSpecifier = $"account/{accountId}";
 
@@ -45,7 +45,7 @@ namespace Wallet.Api.Net.Account
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="accountToUpdate">Account object that specifie the properties of the account to be updated</param>
         /// <returns>Returns the unique Id of the newly created account</returns>
-        public static async Task<string> Update(string authUser, string authToken, WalletAccount accountToUpdate)
+        public static async Task<string> UpdateAsync(string authUser, string authToken, WalletAccount accountToUpdate)
         {
             if (accountToUpdate.Id == null)
                 throw new ArgumentException("Id of updated account object can't be null");
@@ -84,7 +84,7 @@ namespace Wallet.Api.Net.Account
         /// <param name="authUser">The e-mail address of the user to whom the account should be added</param>
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="accountId">The id of the account to be deleted</param>
-        public static async void Delete(string authUser, string authToken, string accountId)
+        public static async void DeleteAsync(string authUser, string authToken, string accountId)
         {
             if (accountId == null)
                 throw new ArgumentException("Id of deleted account can't be null");

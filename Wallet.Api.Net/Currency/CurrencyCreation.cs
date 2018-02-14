@@ -24,7 +24,7 @@ namespace Wallet.Api.Net.Currency
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="currencyToCreate">Account object that specifies the properties of the account to be created</param>
         /// <returns>Returns the unique Id of the newly created account</returns>
-        public static async Task<string> CreateNew(string authUser, string authToken, WalletCurrency currencyToCreate)
+        public static async Task<string> CreateNewAsync(string authUser, string authToken, WalletCurrency currencyToCreate)
         {
             var postConformObject = new
             {

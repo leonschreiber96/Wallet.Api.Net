@@ -26,7 +26,7 @@ namespace Wallet.Api.Net.Category
         /// <param name="authToken">A valid API token (linked to the e-mail of the specified user)</param>
         /// <param name="categoryToCreate">Account object that specifies the properties of the category to be created</param>
         /// <returns>Returns the unique Id of the newly created category</returns>
-        public static async Task<string> CreateNew(string authUser, string authToken, WalletCategory categoryToCreate)
+        public static async Task<string> CreateNewAsync(string authUser, string authToken, WalletCategory categoryToCreate)
         {
             var postConformObject = new
             {
