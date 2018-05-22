@@ -1,6 +1,6 @@
 # Wallet.Api.Net
 
-C# Wrapper for the [BudgetBakers Wallet API](https://budgetbakersv30apiv1.docs.apiary.io/#).
+C# Wrapper for the [BudgetBakers Wallet API](https://budgetbakersv30apiv1.docs.apiary.io/#) V3.0. 
 
 #### From Google Play
 
@@ -17,6 +17,8 @@ Settings -> Advanced Settings -> REST API
 
 With your E-Mail address and API token as authentication, you can access all functions of the API and manage your account via REST.
 
+Detailed documentation regarding the functionality of the API itself can be found on BudgetBakers' [Apiary documentation page](https://budgetbakersv30apiv1.docs.apiary.io/#).
+
 ### Install NuGet Package
 
 Wallet.Api.Net is available as a NuGet package on NuGet.org. 
@@ -30,4 +32,4 @@ Install-Package Wallet.Api.Net
 ## Built With
 
 * [Json.NET](https://www.newtonsoft.com/json) - Popular library for Json Serialization in .Net
-* [.NET Core](https://dotnet.github.io/) - Platform independent .Net Framework by Microsoft
+* [.NET Core](https://dotnet.github.io/) - Platform independent, open source .Net Framework by Microsoft
