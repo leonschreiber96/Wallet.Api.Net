@@ -2,6 +2,8 @@
 
 C# Wrapper for the [BudgetBakers Wallet API](https://budgetbakersv30apiv1.docs.apiary.io/#) V3.0. 
 
+[![Build Status](https://travis-ci.org/Snowfire01/Wallet.Api.Net.svg?branch=master)](https://travis-ci.org/Snowfire01/Wallet.Api.Net)
+
 #### From Google Play
 
 Wallet is your finance planner that helps you flexibly plan your budget and track spending, so you stay in control and achieve your goals. Actively plan, manage and get a report concerning your finances, together with the people you trust, across multiple currencies, banks and financial institutions. Upload your Loyalty or Reward cards too. Get and keep full control of your finances. Tracking your money just got easier. 
