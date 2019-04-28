@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallet.Api.Net", "Wallet.Api.Net\Wallet.Api.Net.csproj", "{C9FDF17D-B929-4C4B-9F69-C86AB4F022C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallet.Api.Net", "src\Wallet.Api.Net.csproj", "{C9FDF17D-B929-4C4B-9F69-C86AB4F022C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
