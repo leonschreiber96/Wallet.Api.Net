@@ -1,0 +1,9 @@
+language: csharp
+solution: Wallet.Api.sln
+
+matrix:
+   include:
+     - dotnet: 2.1.502
+       mono: none
+     - mono: latest
+
